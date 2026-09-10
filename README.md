@@ -3,6 +3,7 @@
 ### Año-Cuatrimestre - Curso-Grupo
 
 ### Responsable de la entrega:
-| Padrón | --Apellidos, Nombres-- | --Fecha-- | -Deadline |
 
+| Padrón | Apellidos, Nombres | Fecha | Deadline |
+|---|---|---|---|
 | 105269 | Pereira Nicolás Manuel | Semana 03 | Semana 04 |
