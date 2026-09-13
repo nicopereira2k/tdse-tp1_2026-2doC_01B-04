@@ -22,12 +22,12 @@ Y el estado del LED va a ser representado con una variable booleana llamada 'LED
 
 | Current State | Event | [Guard] | Next State | Actions |
 | :--- | :--- | :--- | :--- | :--- |
-| **Initial** | - | - | `ST_BARRIER_CLOSE` | - |
+| **Initial** | - | - | `ST_BARRIER_CLOSE` | `tick = ()` |
 | `ST_BARRIER_CLOSE` | `EV_BARRIER_OPN` | - | `ST_BARRIER_LIFT` | - |
 | `ST_BARRIER_LIFT` | `EV_TICK_CHNG` | `tick > 0` | `ST_BARRIER_LIFT` | `tick --` |
 | `ST_BARRIER_LIFT` | `EV_TICK_CHNG` | `tick == 0` | `ST_BARRIER_LIFT` | `!LED_ON ; tick = ()` |
-| `ST_BARRIER_LIFT` | `EV_BARRIER_STOP` | - | `ST_BARRIER_OPEN` | `LED_ON = true` |
+| `ST_BARRIER_LIFT` | `EV_BARRIER_STOP` | - | `ST_BARRIER_OPEN` | `LED_ON = true ; tick = ()` |
 | `ST_BARRIER_OPEN` | `EV_BARRIER_CLS` | - | `ST_BARRIER_LOW` | - |
 | `ST_BARRIER_LOW` | `EV_TICK_CHNG` | `tick > 0` | `ST_BARRIER_LOW` | `tick --` |
 | `ST_BARRIER_LOW` | `EV_TICK_CHNG` | `tick == 0` | `ST_BARRIER_LOW` | `!LED_ON ; tick = ()` |
-| `ST_BARRIER_LOW` | `EV_BARRIER_STOP` | - | `ST_BARRIER_CLOSE` | `LED_ON = false` |
+| `ST_BARRIER_LOW` | `EV_BARRIER_STOP` | - | `ST_BARRIER_CLOSE` | `LED_ON = false ; tick = ()` |
