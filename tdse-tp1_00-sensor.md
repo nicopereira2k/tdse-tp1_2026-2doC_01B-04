@@ -4,19 +4,15 @@ Este modelo representa el comportamiento de un pulsador con un filtro de rebotes
 
 ## Eventos
 
-| Evento | Descripción |
-|---|---|
-| EV_BTN_PRESS | Se presiona el botón |
-| EV_BTN_RELEASE | Se suelta el botón |
+* `EV_BTN_PRESS` : Se presiona el botón 
+* `EV_BTN_RELEASE` : Se suelta el botón 
 
 ## Estados
 
-| Estado | Descripción |
-|---|---|
-| ST_BTN_NTPRESS | Botón no presionado y señal estable |
-| ST_BTN_TR_PRESS | Se detectó una posible pulsación y se espera la estabilización |
-| ST_BTN_PRESS | Botón presionado y señal estable |
-| ST_BTN_TR_NTPRESS | Se detectó una posible liberación y se espera la estabilización |
+* `ST_BTN_NTPRESS` : Botón no presionado y señal estable
+* `ST_BTN_TR_PRESS` : Se detectó una posible pulsación y se espera la estabilización
+* `ST_BTN_PRESS` : Botón presionado y señal estable
+* `ST_BTN_TR_NTPRESS` : Se detectó una posible liberación y se espera la estabilización
 
 ## Tabla de Estados y Excitaciones
 
