@@ -19,8 +19,8 @@ Este modelo representa el comportamiento de un pulsador con un filtro de rebotes
 | Current State | Event | [Guard] | Next State | Actions |
 | :--- | :--- | :--- | :--- | :--- |
 | **Initial** | - | - | `ST_BTN_NTPRESS` | `tick = ()` |
-| `ST_BTN_NTPRESS` | `EV_BTN_PRESS` | - | `ST_BTN_TR_PRESS` | `tick ++` |
+| `ST_BTN_NTPRESS` | `EV_BTN_PRESS` | - | `ST_BTN_TR_PRESS` | `tick --` |
 | `ST_BTN_TR_PRESS` | `EV_BTN_RELEASE` | - | `ST_BTN_NTPRESS` | - |
-| `ST_BTN_TR_PRESS` | - | `tick == ()` | `ST_BTN_PRESS` | `tick = ()` |
-| `ST_BTN_PRESS` | `EV_BTN_RELEASE` | - | `ST_BTN_TR_NTPRESS` | `tick ++` |
-| `ST_BTN_TR_NTPRESS` | - | `tick == ()` | `ST_BTN_NTPRESS` | `tick = ()` |
+| `ST_BTN_TR_PRESS` | `tick == 0` | - | `ST_BTN_PRESS` | `tick = ()` |
+| `ST_BTN_PRESS` | `EV_BTN_RELEASE` | - | `ST_BTN_TR_NTPRESS` | `tick --` |
+| `ST_BTN_TR_NTPRESS` | `tick == 0` | - | `ST_BTN_NTPRESS` | `tick = ()` |
