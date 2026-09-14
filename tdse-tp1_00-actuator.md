@@ -13,10 +13,10 @@ Y el estado del LED va a ser representado con una variable booleana llamada 'LED
 * `EV_TICK_CHNG` : señal para controlar la velocidad de parpadeo del LED
 
 ## Acciones
-* tick = () : reinicia el temporizador
-* tick -- : reduce el temporizador
-* LED_ON = () : deja prendido o apagado el LED
-* !LED_ON : invierte el estado del LED (prendido->apagado, apagado->prendido)
+* `tick = ()` : reinicia el temporizador
+* `tick --` : reduce el temporizador
+* `LED_ON = ()` : deja prendido o apagado el LED
+* `!LED_ON` : invierte el estado del LED (prendido->apagado, apagado->prendido)
 
 ## Actuator Statechart - State Transition Table
 
